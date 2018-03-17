@@ -143,8 +143,8 @@ class DIE(object):
     #------ PRIVATE ------#
 
     def __repr__(self):
-        s = 'DIE %s, size=%s, has_children=%s\n' % (
-            self.tag, self.size, self.has_children)
+        s = 'DIE %s, offset=%d, size=%s, has_children=%s\n' % (
+            self.tag, self.offset, self.size, self.has_children)
         for attrname, attrval in iteritems(self.attributes):
             s += '    |%-18s:  %s\n' % (attrname, attrval)
         return s
